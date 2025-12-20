@@ -10,7 +10,7 @@ function numIslands(grid: string[][]): number {
     const visited = Array.from({ length: m }, () => Array(n).fill(false)) // NOTE: how to create a 2D matrix in JS
 
     const dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-    function dfs(i, j): void {
+    function dfs(i: number, j: number): void {
         if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] === "0" || visited[i][j]) {
             return;
         }
